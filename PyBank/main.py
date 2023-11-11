@@ -61,26 +61,24 @@ min_index = diff_list.index(greatest_decr)
 max_date = date_diff_list[max_index]
 min_date = date_diff_list[min_index]
 
-# final data to terminal
-print('Statstical Analysis')
-print("---------------------------------")
-print(f'Total Months: {rowcount}')
-print(f'Total: ${net_total}')
-print(f'Average Change: ${round(avg_change,2)}')
-print(f'Greatest Increase in Profits: {max_date} (${greatest_incr})')
-print(f'Greatest Decrease in Profits: {min_date} (${greatest_decr})')
+# final data to terminal and text file
+line1 = 'Statstical Analysis'
+line2 = '---------------------------------'
+line3 = f'Total Months: {rowcount}'
+line4 = f'Total: ${net_total}'
+line5 = f'Average Change: ${round(avg_change,2)}'
+line6 = f'Greatest Increase in Profits: {max_date} (${greatest_incr})'
+line7 = f'Greatest Decrease in Profits: {min_date} (${greatest_decr})'
 
+stat_list = [line1,line2,line3,line4,line5,line6,line7]
 
-# final data saved as text file in analysis folder
+# final data printed to terminal and written to text file
 output_path = os.path.join("PyBank", "analysis", "final_analysis.txt")
 with open(output_path,'w') as t:
-    print('Statstical Analysis', file=t)
-    print("---------------------------------", file=t)
-    print(f'Total Months: {rowcount}', file=t)
-    print(f'Total: ${net_total}',file=t)
-    print(f'Average Change: ${round(avg_change,2)}',file=t)
-    print(f'Greatest Increase in Profits: {max_date} (${greatest_incr})',file=t)
-    print(f'Greatest Decrease in Profits: {min_date} (${greatest_decr})',file=t)
+    for x in stat_list:
+        t.write(x)
+        t.write("\n")
+        print(x)
 
 
 
