@@ -70,6 +70,7 @@ line5 = f'Average Change: ${round(avg_change,2)}'
 line6 = f'Greatest Increase in Profits: {max_date} (${greatest_incr})'
 line7 = f'Greatest Decrease in Profits: {min_date} (${greatest_decr})'
 
+# make summary statistics into a list for easier printout
 stat_list = [line1,line2,line3,line4,line5,line6,line7]
 
 # final data printed to terminal and written to text file
