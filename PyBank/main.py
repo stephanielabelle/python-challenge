@@ -7,6 +7,7 @@ num_2 = 0
 diff_list = []
 date_diff_list = []
 
+# defining path to csv file
 budgetpath = os.path.join('..','Resources', 'budget_data.csv')
 
 with open(budgetpath,"r",) as budget_csv:
