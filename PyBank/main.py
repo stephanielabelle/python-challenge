@@ -16,7 +16,7 @@ diff_list = []
 date_diff_list = []
 
 # defining path to csv file
-budgetpath = os.path.join('PyBank','Resources', 'budget_data.csv')
+budgetpath = os.path.join('Pybank','Resources', 'budget_data.csv')
 
 # opening and reading csv file with csv module
 with open(budgetpath,"r",) as budget_csv:
@@ -61,16 +61,27 @@ min_index = diff_list.index(greatest_decr)
 max_date = date_diff_list[max_index]
 min_date = date_diff_list[min_index]
 
-# final data presented
-print("")
-print("Statistical Analysis")
+# final data to terminal
+print('Statstical Analysis')
 print("---------------------------------")
 print(f'Total Months: {rowcount}')
 print(f'Total: ${net_total}')
 print(f'Average Change: ${round(avg_change,2)}')
 print(f'Greatest Increase in Profits: {max_date} (${greatest_incr})')
 print(f'Greatest Decrease in Profits: {min_date} (${greatest_decr})')
-print("")
+
+
+# final data saved as text file in analysis folder
+output_path = os.path.join("PyBank", "analysis", "final_analysis.txt")
+with open(output_path,'w') as t:
+    print('Statstical Analysis', file=t)
+    print("---------------------------------", file=t)
+    print(f'Total Months: {rowcount}', file=t)
+    print(f'Total: ${net_total}',file=t)
+    print(f'Average Change: ${round(avg_change,2)}',file=t)
+    print(f'Greatest Increase in Profits: {max_date} (${greatest_incr})',file=t)
+    print(f'Greatest Decrease in Profits: {min_date} (${greatest_decr})',file=t)
+
 
 
 
