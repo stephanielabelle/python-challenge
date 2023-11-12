@@ -7,19 +7,43 @@ csvpath = os.path.join('PyPoll','Resources','election_data.csv')
 print(csvpath)
 
 candidate = []
-print(candidate)
+
+candidates = []
+num_votes_c0 = 0
+num_votes_c1 = 0
+num_votes_c2 = 0
+num=1
 
 with open(csvpath,"r") as pollcsv:
     csvreader = csv.reader(pollcsv, delimiter=',')
     poll_header = next(pollcsv)
+
     
     for row in csvreader: 
+        
         if row[2] not in candidate:
-            candidate.append(row[2])  
+            candidate.append(row[2])
+        
         #counts number of ballots 
         ballot_count += 1
-        
-print(candidate)
+
+        if row[2] == candidate[0]:
+            num_votes_c0 += 1
+        elif row[2] == candidate[1]:
+            num_votes_c1 += 1
+        else:
+            num_votes_c2 += 1
+
+print(f'{candidate[0]} {num_votes_c0}')
+print(f'{candidate[1]} {num_votes_c1}')
+print(f'{candidate[2]} {num_votes_c2}')    
+
+
+
+        # for person in range(len(candidate)):
+        #     if row[2] == candidate(person):
+        #         sum(person)=+row[1]
+# print(candidate)
 # unique_name = set(candidate)
 # print(unique_name)      
 
