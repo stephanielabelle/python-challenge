@@ -1,4 +1,4 @@
-# Analysis of PyBank and PyPoll csv for Module 3 Challenge
+# Analysis of PyBank and PyPoll CSVs for Module 3 Challenge
 
 Utilized os and csv modules in python script.
 
