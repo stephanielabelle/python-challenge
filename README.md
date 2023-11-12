@@ -6,7 +6,7 @@ Utilized os and csv modules in python script.
 
 The PyBank folder contains all the resources and analysis of financial data for a company.
 
-Financial data is organized in a csv file (budget_data.csv) with two columns: (1) Date, (2) Profit/Losses.
+Financial data was provided in a csv file (budget_data.csv) with two columns: (1) Date, (2) Profit/Losses.
 
 The main.py file includes python script to analyze the budget_data.csv file located in the 'PyBank/Resources' folder.
 The script calculates:
