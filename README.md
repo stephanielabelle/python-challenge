@@ -1,5 +1,7 @@
 # Analysis of PyBank and PyPoll csv for Module 3 Challenge
 
+Utilized os and csv modules in python script.
+
 ## PyBank Folder
 
 The PyBank folder contains all the resources and analysis of financial data for a company.
@@ -19,9 +21,20 @@ Summary statistics outputs to the terminal and to a text file (final_analysis.tx
 
 ## PyPoll Folder
 
-This challenge involved helping a small town modernize their vote counting process. 
-The PyPoll folder contains all the resources and code for analysis of voting data.
+This challenge involves helping a small town modernize their vote counting process. 
 
+The PyPoll folder contains all the resources and python script for analysis of voting data.
+
+Polling information is organized in a csv file (election_data.csv) with three columns: (1) Ballot ID, (2) County, (3) Candidate.
+
+The main.py file includes python script to analyze the election_data.csv file located in the 'PyPoll/Resources' folder.
+The script determines:
+  - Total number of votes
+  - Total number of votes per candidate
+  - Percent of votes per candidate
+  - Final Winner
+
+Summary of election data outputs to the terminal and to a text file (election_analysis.txt) located in the 'PyPoll/analysis' folder.
 
 
 
