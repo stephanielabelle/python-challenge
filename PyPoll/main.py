@@ -2,8 +2,6 @@
 import csv
 import os
 
-
-
 # defining path to csv file
 csvpath = os.path.join('PyPoll','Resources','election_data.csv')
 
@@ -42,7 +40,7 @@ tally = []
 # variable to tally votes for candidates
 tallyentry = 0
 
-# length of candidate list to determine how many candidates
+# length of candidate list to determine how many candidates and utilize for list range
 length = len(candidate)
 
 # moving through candidate list to calculate total number of votes received
@@ -74,6 +72,8 @@ line1 = f'Election Results'
 line2 = f'-------------------------'
 line3 = f'Total Votes: {ballot_count}'
 line4 = f'Winner: {win_name}'
+
+# making output into a list
 block1 = [line1,line2,line3,line2]
 block2 = [line2,line4,line2]
 
